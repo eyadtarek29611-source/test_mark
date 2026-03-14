@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdo-Mark | AI Grading System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Abdo-Mark</h1>
+        <p>Advanced OMR & Grading Interface</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="btn">Upload Exam Sheet</label>
+        </section>
+
+        <section class="results-container">
+            <div class="preview-box">
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div class="data-panel">
+                <h3>Student Data</h3>
+                <p><strong>Status:</strong> <span id="status">Waiting for upload...</span></p>
+                <p><strong>Student ID:</strong> <span id="studentID">---</span></p>
+                <hr>
+                <h3>Detected Answers</h3>
+                <ul id="answerList"></ul>
+                <button id="processBtn" class="btn-primary" disabled>Process Marks</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
